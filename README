@@ -1,0 +1,31 @@
+This layer depends on:
+
+URI: git://git.yoctoproject.org/poky
+Branch: daisy
+Revision: HEAD
+
+URI: git://git.yoctoproject.org/meta-intel
+Branch: daisy
+Revision: HEAD
+
+
+QUICKSTART:
+
+git clone git://git.yoctoproject.org/poky
+git clone git://git.yoctoproject.org/meta-intel
+cd meta-intel
+git checkout diasy
+cd ../poky
+git co daisy
+. oe-init-buildenv
+
+In conf/local.conf append the following:
+
+MACHINE = "intel-corei7-64"
+
+In conf/bblayers.conf append the following with the correct paths:
+
+BBLAYERS += "/path/to/meta-intel"
+BBLAYERS += "/path/to/meta-minnowboardmax"
+
+bitbake minnowboard-max-image
