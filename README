@@ -14,7 +14,7 @@ QUICKSTART:
 git clone git://git.yoctoproject.org/poky
 git clone git://git.yoctoproject.org/meta-intel
 cd meta-intel
-git checkout diasy
+git checkout daisy
 cd ../poky
 git co daisy
 . oe-init-buildenv
